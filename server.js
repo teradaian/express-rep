@@ -1,7 +1,7 @@
 import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { find } from './data/js-db.js'
+import * as jsdb from './data/js-db.js'
 
 const app = express()
 
@@ -14,7 +14,6 @@ app.set(
 // Mount Middleware (app.use)
 
 
-
 // Mount routes
 app.get('/', (req, res) => {
     res.redirect('/home')
@@ -24,12 +23,9 @@ app.get('/home', function(req, res) {
     res.render('home')
 })
 
-app.get('/todos', function(req, res) {
-    todoDb.find({}, function(error, todos) {
-      res.render('todos/index', {
-        todos: todos,
-        error: error
-      })
+app.get('/js', function(req, res) {
+    jsdb.find({}, function(error, facts) {
+      res.render('js/index', { facts, error })
     })
   })
 
