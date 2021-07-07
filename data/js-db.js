@@ -3,9 +3,15 @@ export {
 }
 
 const jsDetails = [
-  {text: 'Feed llama', done: true, _id: 125223},
-  {text: 'Sleep under the stars', done: false, _id: 127904},
-  {text: 'Buy milk', done: false, _id: 139608},
+  {text: 'High level interpreted language'},
+  {text: 'Dynamically Typed'},
+  {text: 'Synchronous'},
+  {text: 'Single Threaded'},
+  {text: 'Everything is an object'},
+  {text: 'Multiparadigm'},
+  {text: 'Language of the web'},
+  {text: 'Scripting Language'},
+  {text: 'Event Oriented Language'},
 ]
 
 const find = (conditions, callback) => {

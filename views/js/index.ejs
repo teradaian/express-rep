@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<%- include('../partials/header') %>
+
+    <h1>JavaScript Truths</h1>
+    <% if(error) { %>
+      <h2><%= error %></h2>
+    <% } %>
+    <ul>
+      <% facts.forEach(function(fact) { %>
+        <li>
+          <%= fact.text %>
+        </li>
+      <% }) %>
+    </ul>
+
+<%- include('../partials/footer'); %>

@@ -30,7 +30,7 @@ app.get('/js', function(req, res) {
   })
 
 app.get('*', function(req, res) {
-    res.render('home')
+    res.redirect('/not-found')
 })
 
 
