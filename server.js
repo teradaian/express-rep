@@ -29,8 +29,8 @@ app.get('/js', function(req, res) {
     })
   })
 
-app.get('*', function(req, res) {
-    res.redirect('/not-found')
+app.get('*', (req, res) => {
+    res.render('/not-found')
 })
 
 
