@@ -30,7 +30,7 @@ app.get('/js', function(req, res) {
   })
 
 app.get('*', (req, res) => {
-    res.render('/not-found')
+    res.render('not-found')
 })
 
 
